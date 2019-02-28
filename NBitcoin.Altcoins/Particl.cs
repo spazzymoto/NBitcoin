@@ -335,6 +335,11 @@ namespace NBitcoin.Altcoins
                         break;
                 }
             }
+
+            public override ConsensusFactory GetConsensusFactory()
+            {
+                return Particl.Instance.Mainnet.Consensus.ConsensusFactory;
+            }
         }
 
         public class ParticlOutPoint : OutPoint
